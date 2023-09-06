@@ -3,11 +3,11 @@ class UsersController < ApplicationController
 	before_action :can_change, only: [:edit, :update]
 
 	def show
-		@user = User.find(params[:id])
+		@user = User.friendly.find(params[:id])
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		@user = User.friendly.find(params[:id])
 	end
 
 	def new

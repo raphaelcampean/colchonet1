@@ -1,5 +1,6 @@
 class Rooms::ReviewsController < ApplicationController
-    before_filter :require_authentication
+    before_action :require_authentication
+    skip_before_action :verify_authenticity_token
     
     def create
         review = room.reviews.
@@ -15,7 +16,7 @@ class Rooms::ReviewsController < ApplicationController
     private
     
     def room
-        @room ||= Room.find(params[:room_id])
+        @room ||= Room.friendly.find(params[:room_id])
     end
     
     def review_params

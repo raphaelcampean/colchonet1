@@ -11,6 +11,7 @@ Colchonet::Application.routes.draw do
 
 	resource :confirmation, only: [:show]
 	resource :user_sessions, only: [:create, :new, :destroy]
+	get '/user_sessions', to: 'user_sessions#destroy'
 
 	root 'home#index'
 end

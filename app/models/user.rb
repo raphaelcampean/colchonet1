@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+	extend FriendlyId
+	friendly_id :full_name, use: [:slugged, :history]
+	
 	has_many :reviews, dependent: :destroy
 	has_many :rooms, dependent: :destroy
 	

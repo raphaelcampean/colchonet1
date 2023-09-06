@@ -17,6 +17,12 @@
     <%= error_tag @room, :description %>
   </div>
 
+  <p>
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
+    <%= error_tag @room, :picture %>
+  </p>
+
   <div>
     <%= form.submit %>
   </div>

@@ -1,4 +1,17 @@
 pt-BR:
+  rooms:
+    index:
+      title: 'Quartos disponíveis'
+      search_results: 'Resultados da busca'
+  search:
+    search_for: 'Buscar por...'
+  review_form:
+    login_to_review: 'Faça o login para avaliar quartos'
+  review:
+    stats:
+      zero: 'Não há avaliações'
+      one: '(1 avaliação)'
+      other: '(%{count} avaliações)'
   dialogs:
     destroy: 'Você tem certeza que quer remover?'
   rooms:
@@ -61,6 +74,7 @@ sobrando na sua casa e ainda conhecer gente do mundo inteiro."
     models:
       room: Quarto
       user: Usuário
+      review: Avaliação
     attributes:
       user:
         bio: Biografia
@@ -73,6 +87,7 @@ sobrando na sua casa e ainda conhecer gente do mundo inteiro."
         description: Descrição
         location: Localização
         title: Título
+        picture: Foto
   activemodel:
     attributes:
       user_session:
