@@ -5,7 +5,7 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -14,7 +14,7 @@ development:
   database: colchonet_dev
   host: localhost
   username: raphael
-  password:
+  password: 
   pool: 5
   timeout: 5000
 
@@ -27,7 +27,7 @@ production:
   shards:
     shard1:
       host: containers-us-west-34.railway.app
-      port: 5956
+      port: 7323
       database: railway
 
 # Warning: The database defined as "test" will be erased and
@@ -38,6 +38,6 @@ test:
   database: colchonet_test
   host: localhost
   username: raphael
-  password:
+  password: 
   pool: 5
   timeout: 5000

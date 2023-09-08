@@ -54,6 +54,8 @@ gem 'kaminari'
 
 gem 'carrierwave'
 
+# gem 'sqlite3'
+
 gem 'pg'
 
 gem 'rmagick'
