@@ -54,7 +54,7 @@ gem 'kaminari'
 
 gem 'carrierwave'
 
-# gem 'sqlite3'
+gem 'sqlite3'
 
 gem 'pg'
 
