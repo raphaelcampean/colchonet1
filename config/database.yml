@@ -20,9 +20,9 @@ development:
 
 production:
   adapter: postgresql
-  database: postgresql
-  host: database.railway.app
-  username: raphael15
+  database: railway
+  host: containers-us-west-34.railway.app
+  username: postgres
   password: wSP7t6x7nEJKJT5RlCGO
 
 # Warning: The database defined as "test" will be erased and
