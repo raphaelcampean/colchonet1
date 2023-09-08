@@ -1,0 +1,18 @@
+databases:
+  - name: colchonet
+    databaseName: colchonet
+    user: raphael
+
+services:
+  - type: web
+    name: colchonet
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: colchonet
+          property: connectionString
+      - key: 17678111a42dc0d9d05d82195427d610
+        sync: false
