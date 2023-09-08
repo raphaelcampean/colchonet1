@@ -20,10 +20,10 @@ development:
 
 production:
   adapter: postgresql
-  database: colchonet
-  host: containers-us-west-95.railway.app
-  username: postgres
-  password: USdtC7KI5g2jXPqU2ioH
+  database: postgresql
+  host: database.railway.app
+  username: Raphael Campean
+  password: R@phael15
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -36,6 +36,3 @@ test:
   password:
   pool: 5
   timeout: 5000
-production:
-  <<: *default
-  database: db/production.postgresql
