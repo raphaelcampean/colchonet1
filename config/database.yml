@@ -9,13 +9,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-
 development:
   adapter: postgresql
   database: colchonet_dev
   host: localhost
   username: raphael
-  password: 
+  password: raphael15
   pool: 5
   timeout: 5000
 
@@ -39,6 +38,6 @@ test:
   database: colchonet_test
   host: localhost
   username: raphael
-  password: 
+  password: raphael15
   pool: 5
   timeout: 5000
