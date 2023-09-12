@@ -94,11 +94,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => 'a8d2caee8d0bea',
-    :password => 'd0d7dca7cd0769',
-    :address => 'sandbox.smtp.mailtrap.io',
-    :host => 'sandbox.smtp.mailtrap.io',
-    :port => '2525',
+    :user_name => ENV['MAILTRAP_USER'],
+    :password => ENV['MAILTRAP_PASSWORD'],
+    :address => ENV['MAILTRAP_ADRESS'],
+    :host => ENV['MAILTRAP_HOST'],
+    :port => ENV['MAILTRAP_PORT'],
     :authentication => :cram_md5
   }
   # Do not dump schema after migrations.
