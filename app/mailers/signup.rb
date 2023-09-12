@@ -8,7 +8,7 @@ class Signup < ActionMailer::Base
         # Link temporário pois a funcionalidade ainda
         # não existe, vamos criar ainda neste capítulo
         @confirmation_link = confirmation_url({
-            token: @user.confirmation_token
+            token: @user.bio
         })
 
         mail({
