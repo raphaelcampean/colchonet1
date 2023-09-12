@@ -88,6 +88,19 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  config.action_mailer.default_url_options = {
+    host: "colchonet1-production.up.railway.app"
+  }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'a8d2caee8d0bea',
+    :password => 'd0d7dca7cd0769',
+    :address => 'sandbox.smtp.mailtrap.io',
+    :host => 'sandbox.smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

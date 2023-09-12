@@ -35,6 +35,10 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.action_mailer.default_url_options = {
+    host: "localhost:3000"
+  }
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :user_name => 'a8d2caee8d0bea',
@@ -44,7 +48,6 @@ Rails.application.configure do
   :port => '2525',
   :authentication => :cram_md5
 }
-
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
@@ -78,11 +81,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {
     host: "localhost:3000"
   }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: "localhost",
-    port: 1025
-  }
+  
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address: "localhost",
+  #   port: 1025
+  # }
+
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
