@@ -14,7 +14,7 @@ development:
   database: colchonet_dev
   host: localhost
   username: raphael
-  password: raphael15
+  password: 
   pool: 5
   timeout: 5000
 
@@ -38,6 +38,6 @@ test:
   database: colchonet_test
   host: localhost
   username: raphael
-  password: raphael15
+  password: 
   pool: 5
   timeout: 5000
