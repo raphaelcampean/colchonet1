@@ -20,16 +20,10 @@ development:
 
 production:
   adapter: postgresql
-  database: railway
-  host: containers-us-west-34.railway.app
-  username: postgres
-  password: wSP7t6x7nEJKJT5RlCGO
-  shards:
-    shard1:
-      host: containers-us-west-34.railway.app
-      port: 7323
-      database: railway
-
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV.fetch("DATABASE_URL") %>
+  
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
