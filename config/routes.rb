@@ -1,4 +1,6 @@
 Colchonet::Application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
 	resources :rooms
 	resources :users
 	# Aqui estarão vários comentários gerados pelo Rails para
