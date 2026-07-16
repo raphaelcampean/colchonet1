@@ -17,6 +17,9 @@
 !/log/.keep
 !/tmp/.keep
 
+colchonet_dev
+colchonet_test
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
